@@ -16,6 +16,9 @@ autoreconf ;
 ./configure && make ; 
 cd .. ;
 make ; 
+if [ ! -e ./bin/cuda_sankoff ]; then
+    ln -s sankoff ./bin/cuda_sankoff
+fi
 cd .. ; 
 sudo ./home/ubuntu/ferramenta_final/servidor_apresentacao/ferramenta/move_file/move_arquivos.sh ; 
 cd servidor_apresentacao/ferramenta ; 
